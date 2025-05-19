@@ -1,13 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-scroll';
-import { ArrowDown, Download, Mail } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-scroll";
+import { ArrowDown, Download, Mail } from "lucide-react";
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center pt-16 container-padding">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center pt-16 container-padding"
+    >
       <div className="container mx-auto grid md:grid-cols-2 gap-8 items-center">
-        <motion.div 
+        <motion.div
           className="text-center md:text-left"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -16,24 +19,31 @@ const Hero: React.FC = () => {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             Ahmad <span className="gradient-text">Sofware Developer</span>
           </h1>
-          
+
           <p className="text-xl md:text-2xl text-text-secondary mb-8">
             I build scalable, modern web & mobile apps
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-            <a href="#" className="btn-primary flex items-center justify-center gap-2">
+            <a
+              href="mailto:ahmadfzn2005@gmail.com"
+              className="btn-primary flex items-center justify-center gap-2"
+            >
               <Mail size={18} />
               Hire Me
             </a>
-            <a href="#" className="btn-outline flex items-center justify-center gap-2">
+            <a
+              href="/file/cv.pdf"
+              download="ahmadfauzan.pdf"
+              className="btn-outline flex items-center justify-center gap-2"
+            >
               <Download size={18} />
               Download CV
             </a>
           </div>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="flex justify-center md:justify-end"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -42,7 +52,7 @@ const Hero: React.FC = () => {
           <div className="relative">
             <div className="h-64 w-64 md:h-72 md:w-72 lg:h-80 lg:w-80 rounded-full overflow-hidden ring-4 ring-accent-purple/30 animate-float">
               <img
-                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src="ahmad.png"
                 alt="Ahmad - Software Developer"
                 className="object-cover w-full h-full"
               />

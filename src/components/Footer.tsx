@@ -1,17 +1,17 @@
-import React from 'react';
-import { Link } from 'react-scroll';
-import { Code, Heart } from 'lucide-react';
+import React from "react";
+import { Link } from "react-scroll";
+import { Code, Heart } from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-  
+
   const quickLinks = [
-    { name: 'Home', to: 'hero' },
-    { name: 'About', to: 'about' },
-    { name: 'Projects', to: 'projects' },
-    { name: 'Skills', to: 'skills' },
-    { name: 'Experience', to: 'experience' },
-    { name: 'Contact', to: 'contact' },
+    { name: "Home", to: "hero" },
+    { name: "About", to: "about" },
+    { name: "Projects", to: "projects" },
+    { name: "Skills", to: "skills" },
+    { name: "Experience", to: "experience" },
+    { name: "Contact", to: "contact" },
   ];
 
   return (
@@ -24,13 +24,14 @@ const Footer: React.FC = () => {
               <span className="text-xl font-semibold font-poppins">Ahmad</span>
             </div>
             <p className="text-text-secondary mb-4">
-              Software developer specializing in creating beautiful, functional, and user-friendly applications.
+              Software developer specializing in creating beautiful, functional,
+              and user-friendly applications.
             </p>
             <p className="text-text-secondary">
               Building digital experiences that make a difference.
             </p>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -49,19 +50,23 @@ const Footer: React.FC = () => {
               ))}
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
-            <p className="text-text-secondary mb-2">ahmad@example.com</p>
-            <p className="text-text-secondary mb-2">+1 (234) 567-8901</p>
-            <p className="text-text-secondary">San Francisco, CA</p>
+            <p className="text-text-secondary mb-2">ahmadfzn2005@gmail.com</p>
+            <p className="text-text-secondary mb-2">+62 878-4677-5109</p>
+            <p className="text-text-secondary">Tasikmalaya, Indonesia</p>
           </div>
         </div>
-        
+
         <div className="border-t border-background-tertiary pt-8 text-center">
           <p className="text-text-secondary flex items-center justify-center gap-2">
-            © {currentYear} Ahmad. All Rights Reserved. Built with 
-            <Heart size={16} className="text-accent-purple" fill="currentColor" />
+            © {currentYear} Ahmad. All Rights Reserved. Built with
+            <Heart
+              size={16}
+              className="text-accent-purple"
+              fill="currentColor"
+            />
           </p>
         </div>
       </div>

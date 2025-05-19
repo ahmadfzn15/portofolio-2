@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Code, Briefcase, Cpu, Coffee } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { Code, Briefcase, Cpu, Coffee } from "lucide-react";
 
 const About: React.FC = () => {
   const fadeIn = {
@@ -16,16 +16,25 @@ const About: React.FC = () => {
   };
 
   const techStack = [
-    { name: 'React', icon: <Code className="text-accent-blue" size={24} /> },
-    { name: 'Node.js', icon: <Cpu className="text-accent-blue" size={24} /> },
-    { name: 'Flutter', icon: <Briefcase className="text-accent-blue" size={24} /> },
-    { name: 'Firebase', icon: <Coffee className="text-accent-blue" size={24} /> },
+    { name: "React", icon: <Code className="text-accent-blue" size={24} /> },
+    { name: "Node.js", icon: <Cpu className="text-accent-blue" size={24} /> },
+    {
+      name: "Flutter",
+      icon: <Briefcase className="text-accent-blue" size={24} />,
+    },
+    {
+      name: "Firebase",
+      icon: <Coffee className="text-accent-blue" size={24} />,
+    },
   ];
 
   return (
-    <section id="about" className="section bg-background-secondary container-padding">
+    <section
+      id="about"
+      className="section bg-background-secondary container-padding"
+    >
       <div className="container mx-auto">
-        <motion.h2 
+        <motion.h2
           className="section-title"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,8 +54,8 @@ const About: React.FC = () => {
           >
             <div className="relative w-full max-w-md">
               <div className="aspect-[3/4] rounded-xl overflow-hidden">
-                <img 
-                  src="https://images.pexels.com/photos/3785104/pexels-photo-3785104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                <img
+                  src="self.JPG"
                   alt="Ahmad Portrait"
                   className="w-full h-full object-cover"
                 />
@@ -56,7 +65,7 @@ const About: React.FC = () => {
           </motion.div>
 
           <div>
-            <motion.h3 
+            <motion.h3
               className="section-subtitle"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -74,13 +83,19 @@ const About: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <p>
-                Hi, I'm Ahmad, a passionate Software Developer with 5+ years of experience in creating modern web and mobile applications.
+                Hi, I'm Ahmad, a passionate Software Developer with 2+ years of
+                experience in creating modern web and mobile applications.
               </p>
               <p>
-                I specialize in building scalable, performant applications using modern technologies. My approach combines clean code principles with user-centered design to create exceptional digital experiences.
+                I specialize in building scalable, performant applications using
+                modern technologies. My approach combines clean code principles
+                with user-centered design to create exceptional digital
+                experiences.
               </p>
               <p>
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge through technical articles and mentoring.
+                When I'm not coding, you can find me exploring new technologies,
+                contributing to open-source projects, or sharing my knowledge
+                through technical articles and mentoring.
               </p>
             </motion.div>
 

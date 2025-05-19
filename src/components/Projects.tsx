@@ -1,13 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ExternalLink, Github } from 'lucide-react';
-import { projects } from '../data/projects';
+import React from "react";
+import { motion } from "framer-motion";
+import { ExternalLink, Github } from "lucide-react";
+import { projects } from "../data/projects";
 
 const Projects: React.FC = () => {
   return (
     <section id="projects" className="section container-padding">
       <div className="container mx-auto">
-        <motion.h2 
+        <motion.h2
           className="section-title"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -28,8 +28,8 @@ const Projects: React.FC = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="relative h-52 overflow-hidden rounded-lg mb-4">
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
@@ -37,15 +37,15 @@ const Projects: React.FC = () => {
               </div>
 
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              
+
               <p className="text-text-secondary mb-4 line-clamp-2">
                 {project.description}
               </p>
 
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.tags.map((tag) => (
-                  <span 
-                    key={tag} 
+                  <span
+                    key={tag}
                     className="text-xs px-2 py-1 rounded-full bg-background-tertiary text-accent-blue"
                   >
                     {tag}
@@ -54,14 +54,7 @@ const Projects: React.FC = () => {
               </div>
 
               <div className="flex gap-4">
-                <a 
-                  href={project.demoUrl}
-                  className="flex items-center gap-1 text-sm text-text-secondary hover:text-accent-blue transition-colors"
-                >
-                  <ExternalLink size={16} />
-                  Live Demo
-                </a>
-                <a 
+                <a
                   href={project.githubUrl}
                   className="flex items-center gap-1 text-sm text-text-secondary hover:text-accent-blue transition-colors"
                 >
@@ -73,7 +66,7 @@ const Projects: React.FC = () => {
           ))}
         </div>
 
-        <motion.div 
+        {/* <motion.div
           className="flex justify-center mt-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -83,7 +76,7 @@ const Projects: React.FC = () => {
           <a href="#" className="btn-outline">
             View All Projects
           </a>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

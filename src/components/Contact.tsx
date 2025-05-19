@@ -1,51 +1,77 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Github,
+  Linkedin,
+  Twitter,
+  Instagram,
+} from "lucide-react";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // This would be connected to an actual backend in a real implementation
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     // Reset form
     setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
     });
     // Show success message (would be implemented properly in a real app)
-    alert('Message sent successfully!');
+    alert("Message sent successfully!");
   };
 
   const contactInfo = [
-    { icon: <Mail size={24} className="text-accent-blue" />, text: 'ahmad@example.com' },
-    { icon: <Phone size={24} className="text-accent-blue" />, text: '+1 (234) 567-8901' },
-    { icon: <MapPin size={24} className="text-accent-blue" />, text: 'San Francisco, CA' },
+    {
+      icon: <Mail size={24} className="text-accent-blue" />,
+      text: "ahmadfzn2005@gmail.com",
+    },
+    {
+      icon: <Phone size={24} className="text-accent-blue" />,
+      text: "+62 878-4677-5109",
+    },
+    {
+      icon: <MapPin size={24} className="text-accent-blue" />,
+      text: "Tasikmalaya, Indonesia",
+    },
   ];
 
   const socialLinks = [
-    { icon: <Github size={20} />, url: 'https://github.com/' },
-    { icon: <Linkedin size={20} />, url: 'https://linkedin.com/' },
-    { icon: <Twitter size={20} />, url: 'https://twitter.com/' },
+    { icon: <Github size={20} />, url: "https://github.com/ahmadfzn15" },
+    {
+      icon: <Linkedin size={20} />,
+      url: "https://www.linkedin.com/in/ahmad-fauzan-8995682a5/",
+    },
+    { icon: <Instagram size={20} />, url: "https://instagram.com/a.fznn__" },
   ];
 
   return (
-    <section id="contact" className="section bg-background-secondary container-padding">
+    <section
+      id="contact"
+      className="section bg-background-secondary container-padding"
+    >
       <div className="container mx-auto">
-        <motion.h2 
+        <motion.h2
           className="section-title"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -64,13 +90,14 @@ const Contact: React.FC = () => {
           >
             <h3 className="text-2xl font-semibold mb-6">Let's Talk</h3>
             <p className="text-text-secondary mb-8">
-              Got a project in mind? Want to collaborate? Or just want to say hello? 
-              Feel free to reach out to me using the contact form or through any of the channels below.
+              Got a project in mind? Want to collaborate? Or just want to say
+              hello? Feel free to reach out to me using the contact form or
+              through any of the channels below.
             </p>
 
             <div className="space-y-6 mb-8">
               {contactInfo.map((item, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="flex items-start gap-4"
                   initial={{ opacity: 0, y: 20 }}
@@ -114,10 +141,16 @@ const Contact: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <form onSubmit={handleSubmit} className="bg-background p-6 rounded-xl shadow-lg">
+            <form
+              onSubmit={handleSubmit}
+              className="bg-background p-6 rounded-xl shadow-lg"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-text-secondary mb-1">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-text-secondary mb-1"
+                  >
                     Name
                   </label>
                   <input
@@ -131,7 +164,10 @@ const Contact: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-text-secondary mb-1">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-text-secondary mb-1"
+                  >
                     Email
                   </label>
                   <input
@@ -145,9 +181,12 @@ const Contact: React.FC = () => {
                   />
                 </div>
               </div>
-              
+
               <div className="mb-4">
-                <label htmlFor="subject" className="block text-sm font-medium text-text-secondary mb-1">
+                <label
+                  htmlFor="subject"
+                  className="block text-sm font-medium text-text-secondary mb-1"
+                >
                   Subject
                 </label>
                 <input
@@ -160,9 +199,12 @@ const Contact: React.FC = () => {
                   className="w-full px-4 py-2 bg-background-tertiary border border-background-tertiary rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-blue text-text-primary"
                 />
               </div>
-              
+
               <div className="mb-6">
-                <label htmlFor="message" className="block text-sm font-medium text-text-secondary mb-1">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-text-secondary mb-1"
+                >
                   Message
                 </label>
                 <textarea
@@ -175,7 +217,7 @@ const Contact: React.FC = () => {
                   className="w-full px-4 py-2 bg-background-tertiary border border-background-tertiary rounded-lg focus:outline-none focus:ring-2 focus:ring-accent-blue text-text-primary resize-none"
                 ></textarea>
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full btn-primary flex items-center justify-center gap-2"
